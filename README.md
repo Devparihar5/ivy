@@ -175,7 +175,7 @@ python3 -m pip install --user -e .
 ```
 
 
-If you want to set up testing and various frameworks it\'s probably     best
+If you want to set up testing and various frameworks it's probably     best
 to check out the [Contributing - Setting
 Up](https://unify.ai/docs/ivy/overview/contributing/setting_up. html#setting-up)
 page, where OS-specific and IDE-specific instructions and video
@@ -315,7 +315,7 @@ backbone = ivy.transpile(
     perceiver_backbone, to="torch", params_v=params, kwargs={"images": dummy_input}
 )
 
-# Build a classifier using the transpiled backbone
+# Build a classifier using the transpile backbone
 class PerceiverIOClassifier(torch.nn.Module):
     def __init__(self, num_classes=20):
         super().__init__()
@@ -351,7 +351,7 @@ import os
 os.environ["SM_FRAMEWORK"] = "tf.keras"
 import segmentation_models as sm
 
-# transpile sm from tensorflow to torch
+# transpile sm from Tensorflow to torch
 torch_sm = ivy.transpile(sm, source="tensorflow", to="torch")
 
 # get some image-like arrays
